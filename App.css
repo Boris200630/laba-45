@@ -1,0 +1,14 @@
+*{ 
+    margin: 0; 
+    padding: 0; 
+ 
+} 
+.todo{ 
+    display: flex; 
+    width: 518px; 
+    font-size: 18px; 
+    border-bottom: 1px solid black; 
+    align-items: center; 
+    padding: 10px 0px; 
+    justify-content: space-between; 
+}
