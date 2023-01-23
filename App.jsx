@@ -20,10 +20,10 @@ function Todo({ todo, index, completeTodo, removeTodo, editTodo }) {
       className="todo"
      
     >
-      {!edit ? <span style={{ textDecoration: todo.isCompleted ? "line-through" : "" }} onClick={startEdit}>{todo.text}</span>  : <input onBlur={stopEdit} value={value} onChange={(event) => setValue(event.target.value)}  />}
+      {!edit ? <span style={{ textDecoration: todo.isCompleted ? "line-through" : "" }} onClick={startEdit}>{todo.text}</span>  : <input className="mainInput" onBlur={stopEdit} value={value} onChange={(event) => setValue(event.target.value)}  />}
       <div>
-        <input type={'checkbox'} onChange={() => completeTodo(index)}/>
-        <button onClick={() => removeTodo(index)}>x</button>
+        <input className="chkbox" type={'checkbox'} onChange={() => completeTodo(index)}/>
+        <button className="btn" onClick={() => removeTodo(index)}>x</button>
       </div>
     </div>
   );
@@ -44,11 +44,11 @@ function TodoForm({ addTodo }) {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        className="input"
+        className="mainInput"
         value={value}
         onChange={e => setValue(e.target.value)}
       />
-    <button type="submit">submit</button>
+    <button className="btn" type="submit">submit</button>
     </form>
   );
   
@@ -115,3 +115,4 @@ function App() {
 }
 
 export default App;
+
